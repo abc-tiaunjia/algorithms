@@ -31,9 +31,4 @@ target_link_libraries(runBinarySearchTests ${GTEST_LIBRARIES} pthread search_lib
 # target_link_libraries(runUnitTests gtest gtest_main)
 add_test(runBinarySearchTests runBinarySearchTests)
 
-# add_test(NAME runBinarySearchTests
-#      COMMAND runBinarySearchTests --gtest_output=xml:report.xml)
-
-# Add Install Targets
-# install (TARGETS text_detector DESTINATION bin)
 
