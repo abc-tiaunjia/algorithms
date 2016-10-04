@@ -14,7 +14,8 @@ include_directories(
 )
 
 # Add Binary Search Library
-add_library(search_lib src/binary_search.cpp)
+add_library(search_lib src/binary_search.cpp
+                       src/binary_search_abstract.cpp)
 
 # Add Binary Search Executable
 # add_executable(binary_search src/binary_search.cpp)
@@ -25,7 +26,8 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 # Link runTests with what we want to test and the GTest and pthread library
-add_executable(runBinarySearchTests test/test_binary_search.cpp)
+add_executable(runBinarySearchTests test/test_binary_search.cpp
+                                    test/test_binary_search_abstract.cpp)
 target_link_libraries(runBinarySearchTests ${GTEST_LIBRARIES} pthread search_lib)
 
 # target_link_libraries(runUnitTests gtest gtest_main)
