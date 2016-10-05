@@ -11,9 +11,9 @@
 #include <vector>
 #include <cstdio>
 
-inline bool p(const std::vector<int>& v, int mid, int target)
+inline bool p(int x, int target)
 {
-	return (v[mid] >= target);
+	return (x >= target);
 }
 int binarySearch(const std::vector<int>& v, int target, int lo, int hi, 
-	bool(&p)(const std::vector<int>&, int, int));
+	bool(&p)(int, int));

@@ -15,24 +15,20 @@
 
 using std::vector;
 
-// bool p(const vector<int>& v, int mid, int target)
-// {
-// 	return (v[mid] >= target);
-// }
 
 int binarySearch(const std::vector<int>& v, int target, int lo, int hi, 
-	bool(&p)(const std::vector<int>&, int, int))
+	bool(&p)(int, int))
 {
 	while (lo < hi)
 	{
 		int mid = (lo + hi)/2;
-		if (p(v, mid, target) == true)
+		if (p(v[mid], target) == true)
 			hi = mid;
 		else
 			lo = mid + 1;
 	}
 	
-	if (p(v, lo, target) == false)	
+	if (p(v[lo], target) == false)	
 		return -1;
 
 	return lo;
