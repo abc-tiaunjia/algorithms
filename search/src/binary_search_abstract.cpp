@@ -27,7 +27,7 @@ int binarySearch(const std::vector<int>& v, int target, int lo, int hi,
 		else
 			lo = mid + 1;
 	}
-	
+
 	if (p(v[lo], target) == false)	
 		return -1;
 
